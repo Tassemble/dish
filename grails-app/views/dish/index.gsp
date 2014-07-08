@@ -40,7 +40,7 @@
 					
 						<td>${fieldValue(bean: dishInstance, field: "pictureUrl")}</td>
 					
-						<td>${fieldValue(bean: dishInstance, field: "restaurant")}</td>
+						<td>${fieldValue(bean: dishInstance, field: "restaurant.name")}</td>
 					
 					</tr>
 				</g:each>

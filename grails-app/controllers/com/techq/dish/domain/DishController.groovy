@@ -1,6 +1,6 @@
 package com.techq.dish.domain
 
-
+import com.google.gson.Gson
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
@@ -10,12 +10,11 @@ import grails.converters.*
 class DishController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+    Gson gson = new Gson();
 
     def json = {
         render Dish.list() as JSON // Using the Controller's dynamic render method
     }
-
-
 
 
     def index(Integer max) {
@@ -23,8 +22,16 @@ class DishController {
         respond Dish.list(params), model: [dishInstanceCount: Dish.count()]
     }
 
-    def show(Dish dishInstance) {
-        respond dishInstance
+    def show(Dish dish) {
+//        render contentType: 'application/json', text: dishInstance;
+        def map = ["pictureUrl": dish.pictureUrl, "name":dish.name, "restaurant" : ["name" : dish.restaurant.name]]
+//        render contentType: 'application/json', text: gson.toJson(map);
+        render  map as JSON
+//        respond dishInstance
+    }
+
+    def showWithJson(Dish dishInstance) {
+        render  dishInstance as JSON
     }
 
     def create() {

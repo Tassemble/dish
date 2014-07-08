@@ -13,7 +13,6 @@
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
 				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
-
 			</ul>
 		</div>
 		<div id="list-member" class="content scaffold-list" role="main">
@@ -25,17 +24,17 @@
 			<thead>
 					<tr>
 					
-						<g:sortableColumn property="loginId" title="${message(code: 'member.loginId.label', default: 'Login Id')}" />
+						<g:sortableColumn property="username" title="${message(code: 'member.username.label', default: 'Username')}" />
 					
-						<g:sortableColumn property="loginType" title="${message(code: 'member.loginType.label', default: 'Login Type')}" />
+						<g:sortableColumn property="password" title="${message(code: 'member.password.label', default: 'Password')}" />
 					
-						<g:sortableColumn property="memberType" title="${message(code: 'member.memberType.label', default: 'Member Type')}" />
+						<g:sortableColumn property="enabled" title="${message(code: 'member.enabled.label', default: 'Enabled')}" />
 					
 						<g:sortableColumn property="largePic" title="${message(code: 'member.largePic.label', default: 'Large Pic')}" />
 					
-						<g:sortableColumn property="nickname" title="${message(code: 'member.nickname.label', default: 'Nickname')}" />
+						<g:sortableColumn property="memberType" title="${message(code: 'member.memberType.label', default: 'Member Type')}" />
 					
-						<g:sortableColumn property="password" title="${message(code: 'member.password.label', default: 'Password')}" />
+						<g:sortableColumn property="nickname" title="${message(code: 'member.nickname.label', default: 'Nickname')}" />
 					
 					</tr>
 				</thead>
@@ -43,17 +42,17 @@
 				<g:each in="${memberInstanceList}" status="i" var="memberInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${memberInstance.id}">${fieldValue(bean: memberInstance, field: "loginId")}</g:link></td>
+						<td><g:link action="show" id="${memberInstance.id}">${fieldValue(bean: memberInstance, field: "username")}</g:link></td>
 					
-						<td>${fieldValue(bean: memberInstance, field: "loginType")}</td>
+						<td>${fieldValue(bean: memberInstance, field: "password")}</td>
 					
-						<td>${fieldValue(bean: memberInstance, field: "memberType")}</td>
+						<td><g:formatBoolean boolean="${memberInstance.enabled}" /></td>
 					
 						<td>${fieldValue(bean: memberInstance, field: "largePic")}</td>
 					
-						<td>${fieldValue(bean: memberInstance, field: "nickname")}</td>
+						<td>${fieldValue(bean: memberInstance, field: "memberType")}</td>
 					
-						<td>${fieldValue(bean: memberInstance, field: "password")}</td>
+						<td>${fieldValue(bean: memberInstance, field: "nickname")}</td>
 					
 					</tr>
 				</g:each>

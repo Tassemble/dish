@@ -23,47 +23,11 @@
 			</g:if>
 			<ol class="property-list member">
 			
-				<g:if test="${memberInstance?.loginId}">
+				<g:if test="${memberInstance?.username}">
 				<li class="fieldcontain">
-					<span id="loginId-label" class="property-label"><g:message code="member.loginId.label" default="Login Id" /></span>
+					<span id="username-label" class="property-label"><g:message code="member.username.label" default="Username" /></span>
 					
-						<span class="property-value" aria-labelledby="loginId-label"><g:fieldValue bean="${memberInstance}" field="loginId"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${memberInstance?.loginType}">
-				<li class="fieldcontain">
-					<span id="loginType-label" class="property-label"><g:message code="member.loginType.label" default="Login Type" /></span>
-					
-						<span class="property-value" aria-labelledby="loginType-label"><g:fieldValue bean="${memberInstance}" field="loginType"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${memberInstance?.memberType}">
-				<li class="fieldcontain">
-					<span id="memberType-label" class="property-label"><g:message code="member.memberType.label" default="Member Type" /></span>
-					
-						<span class="property-value" aria-labelledby="memberType-label"><g:fieldValue bean="${memberInstance}" field="memberType"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${memberInstance?.largePic}">
-				<li class="fieldcontain">
-					<span id="largePic-label" class="property-label"><g:message code="member.largePic.label" default="Large Pic" /></span>
-					
-						<span class="property-value" aria-labelledby="largePic-label"><g:fieldValue bean="${memberInstance}" field="largePic"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${memberInstance?.nickname}">
-				<li class="fieldcontain">
-					<span id="nickname-label" class="property-label"><g:message code="member.nickname.label" default="Nickname" /></span>
-					
-						<span class="property-value" aria-labelledby="nickname-label"><g:fieldValue bean="${memberInstance}" field="nickname"/></span>
+						<span class="property-value" aria-labelledby="username-label"><g:fieldValue bean="${memberInstance}" field="username"/></span>
 					
 				</li>
 				</g:if>
@@ -77,11 +41,38 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${memberInstance?.phoneNumber}">
+				<g:if test="${memberInstance?.enabled}">
 				<li class="fieldcontain">
-					<span id="phoneNumber-label" class="property-label"><g:message code="member.phoneNumber.label" default="Phone Number" /></span>
+					<span id="enabled-label" class="property-label"><g:message code="member.enabled.label" default="Enabled" /></span>
 					
-						<span class="property-value" aria-labelledby="phoneNumber-label"><g:fieldValue bean="${memberInstance}" field="phoneNumber"/></span>
+						<span class="property-value" aria-labelledby="enabled-label"><g:formatBoolean boolean="${memberInstance?.enabled}" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${memberInstance?.largePic}">
+				<li class="fieldcontain">
+					<span id="largePic-label" class="property-label"><g:message code="member.largePic.label" default="Large Pic" /></span>
+					
+						<span class="property-value" aria-labelledby="largePic-label"><g:fieldValue bean="${memberInstance}" field="largePic"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${memberInstance?.memberType}">
+				<li class="fieldcontain">
+					<span id="memberType-label" class="property-label"><g:message code="member.memberType.label" default="Member Type" /></span>
+					
+						<span class="property-value" aria-labelledby="memberType-label"><g:fieldValue bean="${memberInstance}" field="memberType"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${memberInstance?.nickname}">
+				<li class="fieldcontain">
+					<span id="nickname-label" class="property-label"><g:message code="member.nickname.label" default="Nickname" /></span>
+					
+						<span class="property-value" aria-labelledby="nickname-label"><g:fieldValue bean="${memberInstance}" field="nickname"/></span>
 					
 				</li>
 				</g:if>

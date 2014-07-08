@@ -34,11 +34,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${restaurantInstance?.ownerName}">
+				<g:if test="${restaurantInstance?.name}">
 				<li class="fieldcontain">
-					<span id="ownerName-label" class="property-label"><g:message code="restaurant.ownerName.label" default="Owner Name" /></span>
+					<span id="name-label" class="property-label"><g:message code="restaurant.name.label" default="Name" /></span>
 					
-						<span class="property-value" aria-labelledby="ownerName-label"><g:fieldValue bean="${restaurantInstance}" field="ownerName"/></span>
+						<span class="property-value" aria-labelledby="name-label"><g:fieldValue bean="${restaurantInstance}" field="name"/></span>
 					
 				</li>
 				</g:if>

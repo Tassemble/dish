@@ -23,6 +23,6 @@
 		<g:message code="dish.restaurant.label" default="Restaurant" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="restaurant" name="restaurant.id" from="${com.techq.dish.domain.Restaurant.list()}" optionKey="id" required="" value="${dishInstance?.restaurant?.id}" class="many-to-one"/>
+	<g:select id="restaurant" name="restaurant.id" from="${com.techq.dish.domain.Restaurant.list()}" optionKey="id" optionValue="name" required="" value="${dishInstance?.restaurant?.id}" class="many-to-one"/>
 </div>
 

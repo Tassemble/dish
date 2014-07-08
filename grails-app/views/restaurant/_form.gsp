@@ -19,11 +19,11 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: restaurantInstance, field: 'ownerName', 'error')} ">
-	<label for="ownerName">
-		<g:message code="restaurant.ownerName.label" default="Owner Name" />
+<div class="fieldcontain ${hasErrors(bean: restaurantInstance, field: 'name', 'error')} ">
+	<label for="name">
+		<g:message code="restaurant.name.label" default="Name" />
 		
 	</label>
-	<g:textField name="ownerName" value="${restaurantInstance?.ownerName}"/>
+	<g:textField name="name" value="${restaurantInstance?.name}"/>
 </div>
 
